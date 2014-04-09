@@ -13,8 +13,8 @@ module Push
       8 => "Invalid token",
       255 => "None (unknown error)"
     }
-    store :properties, accessors: [:alert, :badge, :sound, :expiry, :attributes_for_device, :content_available]
-    attr_accessible :app, :device, :alert, :badge, :sound, :expiry, :attributes_for_device, :content_available if defined?(ActiveModel::MassAssignmentSecurity)
+    store :properties, accessors: [:alert, :badge, :sound, :expiry, :ext_id, :attributes_for_device, :content_available]
+    attr_accessible :app, :device, :alert, :badge, :sound, :expiry, :ext_id, :attributes_for_device, :content_available if defined?(ActiveModel::MassAssignmentSecurity)
 
     validates :badge, :numericality => true, :allow_nil => true
     validates :expiry, :numericality => true, :presence => true
